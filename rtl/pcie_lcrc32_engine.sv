@@ -110,13 +110,13 @@ module pcie_lcrc32_engine
   assign crc_inv_o       = crc_state_q ^ LCRC32_XOR_OUT;
   assign residue_match_o = (crc_state_q == LCRC32_RESIDUE);
 
-  // Wire format: bit-reversal of each byte of crc_inv_o
-  // Byte 3 = bits 31:24, Byte 2 = bits 23:16, Byte 1 = bits 15:8, Byte 0 = bits 7:0
+  // Wire format: byte b is bit-reversal of byte (3 - b) of crc_inv_o
+  // Byte 0 on wire = bit-reversed crc_inv_o[31:24], Byte 3 on wire = bit-reversed crc_inv_o[7:0]
   genvar b, bit_idx;
   generate
     for (b = 0; b < 4; b++) begin : gen_wire_bytes
       for (bit_idx = 0; bit_idx < 8; bit_idx++) begin : gen_wire_bits
-        assign crc_transmitted_o[b*8 + bit_idx] = crc_inv_o[b*8 + (7 - bit_idx)];
+        assign crc_transmitted_o[b*8 + bit_idx] = crc_inv_o[(3 - b)*8 + (7 - bit_idx)];
       end
     end
   endgenerate
