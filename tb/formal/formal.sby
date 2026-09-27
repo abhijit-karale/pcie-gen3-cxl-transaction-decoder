@@ -1,0 +1,33 @@
+[options]
+mode prove
+depth 25
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal pcie_types_pkg.sv
+read -formal pcie_sync_header_aligner.sv
+read -formal pcie_descrambler_lfsr.sv
+read -formal pcie_elastic_buffer.sv
+read -formal pcie_lcrc32_engine.sv
+read -formal pcie_tlp_parser.sv
+read -formal pcie_gen3_phy_decoder_top.sv
+read -formal elastic_buffer_sva.sv
+read -formal sync_header_sva.sv
+read -formal lcrc32_sva.sv
+read -formal pcie_formal_bind.sv
+prep -top pcie_gen3_phy_decoder_top
+
+[files]
+../../rtl/pcie_types_pkg.sv
+../../rtl/pcie_sync_header_aligner.sv
+../../rtl/pcie_descrambler_lfsr.sv
+../../rtl/pcie_elastic_buffer.sv
+../../rtl/pcie_lcrc32_engine.sv
+../../rtl/pcie_tlp_parser.sv
+../../rtl/pcie_gen3_phy_decoder_top.sv
+elastic_buffer_sva.sv
+sync_header_sva.sv
+lcrc32_sva.sv
+pcie_formal_bind.sv

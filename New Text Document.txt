@@ -1,0 +1,22 @@
+# Role & Operational Task
+Act as a High-Speed Serial Interface Architect and Protocol Verification Lead. Generate a complete, production-grade, standalone codebase and verification suite for the project below with zero placeholders or pseudocode.
+
+## 1. Candidate Context
+- Candidate: Abhijit Karale (Experienced in high-speed hardware protocols, signal integrity diagnostics, and robust clock domain crossings).
+- Target Tech Node & Clock: SkyWater 130nm / FreePDK45 @ 250 MHz.
+
+## 2. Project Directive: PCIe Gen3 / CXL 2.0 Physical Link Layer Transaction Decoder
+- Focus: 128b/130b block framing, descrambling, elastic buffering, clock tolerance compensation.
+- Key Specifications:
+  * 128b/130b sync header decoder and polynomial pseudo-random descrambler ($x^{23} + x^{21} + x^{16} + x^8 + x^5 + x^2 + 1$).
+  * Elastic Buffer FIFO compensating for $\pm 300\text{ ppm}$ clock frequency variations with SKP ordered-set insertion/deletion.
+  * TLP (Transaction Layer Packet) framing boundary identification and 32-bit LCRC calculation engine.
+
+## 3. Mandatory Deliverables
+1. Microarchitectural Spec: Physical layer pipeline diagram (ASCII), elastic buffer control FSM, and LCRC polynomial logic.
+2. Synthesizable RTL (`rtl/`): Sync header aligner, LFSR descrambler, elastic buffer with pointer management, and TLP parser.
+3. Formal Verification (`tb/formal/`): JasperGold SVA suite proving zero pointer inversion in the elastic buffer and 100% detection of corrupted sync headers.
+4. Layered UVM 1.2 Suite (`tb/uvm/`): Constrained-random packet generator with PPM clock jitter injection and packet corruption scoreboarding.
+5. Cycle-Accurate Waveform Guide: ASCII trace detailing SKP ordered set removal inside the elastic buffer during clock drift.
+6. Synthesis Setup (`syn/`): High-speed SDC timing constraints and synthesis run scripts.
+7. Repo Blueprint: File layout, complete `Makefile`, and production `README.md`.
