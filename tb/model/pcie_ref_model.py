@@ -105,10 +105,10 @@ class PCIeLCRC32Ref:
 
     @staticmethod
     def format_wire_crc(crc_inverted):
-        # PCIe Wire format: bit-reversal of each byte of inverted CRC
+        # PCIe Wire format: byte b is bit-reversal of byte (3 - b) of inverted CRC
         wire_crc = 0
         for b in range(4):
-            byte_val = (crc_inverted >> (b * 8)) & 0xFF
+            byte_val = (crc_inverted >> ((3 - b) * 8)) & 0xFF
             rev_byte = int(f"{byte_val:08b}"[::-1], 2)
             wire_crc |= (rev_byte << (b * 8))
         return wire_crc
