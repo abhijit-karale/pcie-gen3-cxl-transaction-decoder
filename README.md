@@ -7,6 +7,13 @@
 
 ---
 
+<div align="center">
+  <img src="doc/pcie_cxl_simulation_workstation.png" alt="PCIe Gen3 / CXL Physical & Link Layer Transaction Decoder - EDA Simulation Workstation" width="100%"/>
+  <p><em>Figure 1: Complete EDA RTL Verification Workstation — Waveform Viewer, SystemVerilog Source, SVA Assertions, Transaction Monitor, Scoreboard & Functional Coverage</em></p>
+</div>
+
+---
+
 ## 1. Candidate Context & Executive Summary
 - **Candidate**: **Abhijit Karale**
 - **Specialization**: High-Speed Serial Hardware Protocols, Signal Integrity Diagnostics, Robust Clock Domain Crossing (CDC) Architectures, and Formal Protocol Verification.
