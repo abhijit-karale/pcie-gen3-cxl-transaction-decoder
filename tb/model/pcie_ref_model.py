@@ -249,8 +249,14 @@ def run_all_tests():
     print(f"  Current Occupancy: {len(eb.fifo)} (Low Watermark = {LOW_WATERMARK})")
     assert len(eb.fifo) <= LOW_WATERMARK, "FIFO occupancy did not drop below low watermark!"
 
-    # Put a SKP in FIFO and read -> Must be duplicated
+    # Drain any remaining data blocks from FIFO
+    while len(eb.fifo) > 0:
+        eb.read_block()
+
+    print(f"  FIFO drained to empty: {len(eb.fifo)}")
+    # Write a SKP Ordered Set into empty FIFO
     eb.write_block("OS", SKP_PATTERN_32, is_skp=True)
+    # Read the SKP block under low watermark (< LOW_WATERMARK) -> Must trigger duplication
     dup_block = eb.read_block()
     print(f"  Total SKP Inserted/Duplicated: {eb.skp_inserted_cnt}")
     assert eb.skp_inserted_cnt > 0, "SKP Ordered Set was not duplicated below low watermark!"
