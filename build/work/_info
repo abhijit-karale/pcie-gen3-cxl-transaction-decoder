@@ -1,0 +1,216 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/abhij/Downloads/SOC/PCIe Gen3  CXL Physical Link Layer Transaction Decoder
+vpcie_descrambler_lfsr
+Z1 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z2 DXx4 work 14 pcie_types_pkg 0 22 [oge;M8YAdnVzHc6j^ZED3
+Z3 !s110 1790561670
+!i10b 1
+!s100 2R=>cXz[IDTHV;WMh;k1_3
+I:?^98Z1W67C4D]aQ69?bN2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s105 pcie_descrambler_lfsr_sv_unit
+S1
+R0
+w1790473441
+8rtl/pcie_descrambler_lfsr.sv
+Frtl/pcie_descrambler_lfsr.sv
+Z5 L0 13
+Z6 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z7 !s108 1790561670.000000
+!s107 tb/standalone/tb_standalone_top.sv|rtl/pcie_gen3_phy_decoder_top.sv|rtl/pcie_tlp_parser.sv|rtl/pcie_lcrc32_engine.sv|rtl/pcie_elastic_buffer.sv|rtl/pcie_descrambler_lfsr.sv|rtl/pcie_sync_header_aligner.sv|rtl/pcie_types_pkg.sv|
+Z8 !s90 -sv|-timescale|1ns/1ps|+incdir+rtl|rtl/pcie_types_pkg.sv|rtl/pcie_sync_header_aligner.sv|rtl/pcie_descrambler_lfsr.sv|rtl/pcie_elastic_buffer.sv|rtl/pcie_lcrc32_engine.sv|rtl/pcie_tlp_parser.sv|rtl/pcie_gen3_phy_decoder_top.sv|tb/standalone/tb_standalone_top.sv|-work|build/work|
+!i113 0
+Z9 o-sv -timescale 1ns/1ps -work build/work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 !s92 -sv -timescale 1ns/1ps +incdir+rtl -work build/work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0
+vpcie_elastic_buffer
+R1
+R2
+R3
+!i10b 1
+!s100 <GFEIWchee5^;<:4:Ua:V0
+Ih[lMD7aDG7QCWzeAOlhL20
+R4
+!s105 pcie_elastic_buffer_sv_unit
+S1
+R0
+w1790473458
+8rtl/pcie_elastic_buffer.sv
+Frtl/pcie_elastic_buffer.sv
+Z12 L0 14
+R6
+r1
+!s85 0
+31
+R7
+Z13 !s107 tb/standalone/tb_standalone_top.sv|rtl/pcie_gen3_phy_decoder_top.sv|rtl/pcie_tlp_parser.sv|rtl/pcie_lcrc32_engine.sv|rtl/pcie_elastic_buffer.sv|rtl/pcie_descrambler_lfsr.sv|rtl/pcie_sync_header_aligner.sv|rtl/pcie_types_pkg.sv|
+R8
+!i113 0
+R9
+R10
+R11
+vpcie_gen3_phy_decoder_top
+R1
+R2
+R3
+!i10b 1
+!s100 3<53PJ]1IdI?Oc?99@SJW3
+I9hCeAAH6olAGhMINjLAik1
+R4
+!s105 pcie_gen3_phy_decoder_top_sv_unit
+S1
+R0
+w1790473629
+8rtl/pcie_gen3_phy_decoder_top.sv
+Frtl/pcie_gen3_phy_decoder_top.sv
+R12
+R6
+r1
+!s85 0
+31
+R7
+R13
+R8
+!i113 0
+R9
+R10
+R11
+vpcie_lcrc32_engine
+R1
+R2
+R3
+!i10b 1
+!s100 Td;KLN4N>HUWkB@TLb>HF3
+IP9_0laA9fSegGY`_Oh0lc3
+R4
+!s105 pcie_lcrc32_engine_sv_unit
+S1
+R0
+w1790474434
+8rtl/pcie_lcrc32_engine.sv
+Frtl/pcie_lcrc32_engine.sv
+L0 15
+R6
+r1
+!s85 0
+31
+R7
+R13
+R8
+!i113 0
+R9
+R10
+R11
+vpcie_sync_header_aligner
+R1
+R2
+R3
+!i10b 1
+!s100 YbVZfT2EZ^<BlXCdijF5A3
+IUJbTHGdaPWe?KLg9[hHhN1
+R4
+!s105 pcie_sync_header_aligner_sv_unit
+S1
+R0
+w1790473426
+8rtl/pcie_sync_header_aligner.sv
+Frtl/pcie_sync_header_aligner.sv
+L0 12
+R6
+r1
+!s85 0
+31
+R7
+R13
+R8
+!i113 0
+R9
+R10
+R11
+vpcie_tlp_parser
+R1
+R2
+R3
+!i10b 1
+!s100 Vi6]lbiGjdf4AhEegmkb92
+IW`S?694>_[l1WHVUzd^jn0
+R4
+!s105 pcie_tlp_parser_sv_unit
+S1
+R0
+w1790473614
+8rtl/pcie_tlp_parser.sv
+Frtl/pcie_tlp_parser.sv
+R5
+R6
+r1
+!s85 0
+31
+R7
+R13
+R8
+!i113 0
+R9
+R10
+R11
+Xpcie_types_pkg
+R1
+R3
+!i10b 1
+!s100 ofk@:K74P[@KP`9;8QO:62
+I[oge;M8YAdnVzHc6j^ZED3
+V[oge;M8YAdnVzHc6j^ZED3
+S1
+R0
+w1790473415
+8rtl/pcie_types_pkg.sv
+Frtl/pcie_types_pkg.sv
+R12
+R6
+r1
+!s85 0
+31
+R7
+R13
+R8
+!i113 0
+R9
+R10
+R11
+vtb_standalone_top
+R1
+R2
+R3
+!i10b 1
+!s100 f:XOBEWYXZBFMbfX94[gI3
+IQADDZf^L:VOz6[5cImSSo0
+R4
+!s105 tb_standalone_top_sv_unit
+S1
+R0
+w1790474533
+8tb/standalone/tb_standalone_top.sv
+Ftb/standalone/tb_standalone_top.sv
+R5
+R6
+r1
+!s85 0
+31
+R7
+R13
+R8
+!i113 0
+R9
+R10
+R11
